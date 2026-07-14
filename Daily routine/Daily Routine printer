@@ -1,0 +1,21 @@
+print("A daily routine")
+
+print("I wake up in the morning")
+
+print("I do my codingal class")
+
+print("I play some games")
+
+print("i eat lunch")
+
+print("i do work on math for about an hour and a half")
+
+print("i do more work")
+
+print("i play more games for a bit")
+
+print("i eat dinner")
+
+print("i sleep")
+
+print("my total math work hours in a week is:", 1.5*7)
