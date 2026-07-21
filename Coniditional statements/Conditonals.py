@@ -9,7 +9,7 @@ else:
     print("It is warm today")
     print("Wear a", outfit)
 
-is_raining = input("It it raining? (yes/no):")
+is_raining = input("It it raining? (Do not use spaces) (yes/no):")
 if is_raining == "yes":
     print("bring an umbrella")
 
