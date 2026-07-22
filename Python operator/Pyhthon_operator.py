@@ -39,3 +39,6 @@ elif day in ("Saturday", "Sunday") and weather == "sunny":
     print("You literally have the best weekend outcome go outside")
 else:
     print("i dont know at this point just good luck")
+
+print()
+print("have a good day")
