@@ -15,4 +15,4 @@ print(f"Character: {char}")
 print(f"ASCII Value: {ascii_val}")
 
 
-
+print("\nCharacter Type: ", end="")
