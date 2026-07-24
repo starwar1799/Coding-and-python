@@ -27,4 +27,3 @@ elif ascii_val == 32:
 else:
     print("Special Character")
 
-
