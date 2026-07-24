@@ -1,0 +1,13 @@
+print("enter a number A: ")
+numA = int(input())
+print("enter a 2nd number B: ")
+numB = int(input())
+print("enter a 3rd number C: ")
+numC = int(input())
+Storage = numC
+numC = (numB)
+numB = (numA)
+numA = (Storage)
+print ("New Number A:", numA)
+print ("New Number B:", numB)
+print ("New Number C:", numC)
