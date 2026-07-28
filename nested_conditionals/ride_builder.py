@@ -46,5 +46,6 @@ else:
     print("That's not valid.")
     print("Pick 1 or 2")
 
-    print("Your ride is ready!")
-    print(" Enjoy Your journey ")
+print()
+print("Your ride is ready!")
+print("Enjoy Your journey!")
