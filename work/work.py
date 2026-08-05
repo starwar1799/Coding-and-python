@@ -69,9 +69,3 @@ elif guess_5 == range(21, 40+1) or range(60, 79+1):
     print("Hot guess! Almost there")
 elif guess_5 == range(41, 59+1):
     print("SUPER HOT GUESS!!!!!!!!!  SO CLOSE JUST A BIT MORE!!!")
-
-if guess >= 6 and <=50:
-    print("You were not able to guess the number in time. the number waas 12")
-    if win = true set guess to 53
-if guess =  53:
-    print("you won.")
