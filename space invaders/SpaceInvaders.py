@@ -17,7 +17,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-background = pygame.image.load(r"C:\Users\satya\Desktop\Coding and python\arrow key game\BlaCK HOLR.jpg")
+background = pygame.image.load(r"C:\Users\satya\Desktop\Coding and python\space invaders\ImageForArticle_549_17288689857007544.webp")
 background = pygame.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 pygame.display.set_caption("Space Invader")
@@ -37,7 +37,7 @@ enemyX = []
 enemyY = []
 enemyX_change = []
 enemyY_change = []
-num_of_enemies = 14
+num_of_enemies = 6
 
 for _i in range(num_of_enemies):
     enemy_image = pygame.image.load(r"C:\Users\satya\Desktop\Coding and python\space invaders\Alien_movie_poster.jpg")
@@ -45,7 +45,7 @@ for _i in range(num_of_enemies):
 
     enemyImg.append(enemy_image)
     enemyX.append(random.randint(0, SCREEN_WIDTH - 64))
-    enemyX.append(random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX))
+    enemyY.append(random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX))
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
@@ -58,11 +58,11 @@ bulletY_change = BULLET_SPEED_Y
 bullet_state = "ready"
 
 score_value = 0
-font = pygame.font.Font('arialblack.ttf', 32)
+font = pygame.font.Font('freesansbold.ttf', 32)
 textX = 10
 textY = 10
 
-over_font = pygame.font.Font('arialblack.ttf', 64)
+over_font = pygame.font.Font('freesansbold.ttf', 64)
 
 def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
@@ -95,11 +95,11 @@ while running:
         if event.type== pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
-            if event.type == pygame.K_LEFT:
+            if event.key == pygame.K_LEFT:
                 playerX_change = -5
-            if event.type == pygame.K_RIGHT:
+            if event.key == pygame.K_RIGHT:
                  playerX_change = 5
-            if event.type == pygame.K_SPACE and bullet_state == "ready":
+            if event.key == pygame.K_SPACE and bullet_state == "ready":
                 bulletX = playerX
                 fire_bullet(bulletX, bulletY)
         if event.type == pygame.KEYUP and event.key in [pygame.K_LEFT, pygame.K_RIGHT]:
@@ -109,11 +109,11 @@ while running:
     playerX = max(0, min(playerX, SCREEN_WIDTH - 64))
 
     for i in range(num_of_enemies):
-        if enemyY[I] > 340:
+        if enemyY[i] > 340:
             for j in range(num_of_enemies):
-                enemyY[j] = 2000
-                game_over_text
-                break
+                enemyY[j] = 3000
+            game_over_text()
+            break
 
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0 or enemyX[i] >= SCREEN_WIDTH - 64:
@@ -138,4 +138,4 @@ while running:
 
     player(playerX, playerY)
     show_score(textX, textY)
-    pygame.display.update
+    pygame.display.update()
